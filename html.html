@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta Aplikacja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Witaj w mojej prostej aplikacji!</h1>
+    <code>update test 1</code>
+    <label for="name">Wprowadź swoje imię:</label>
+    <input type="text" id="name" placeholder="Imię">
+    <button onclick="greetUser()">Powitaj mnie!</button>
+
+    <p id="greeting"></p>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById('name').value;
+            const greetingMessage = name ? `Witaj, ${name}!` : 'Witaj, nieznajomy!';
+            document.getElementById('greeting').innerText = greetingMessage;
+        }
+    </script>
+
+</body>
+</html>
